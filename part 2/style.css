@@ -1,0 +1,95 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+    --dark: #212129;
+    --smoke: rgba(255, 255, 255, 0.05);
+    --dust: rgba(255, 255, 255, 0.15);
+    --mist: rgba(255, 255, 255, 0.65);
+    --meh:  rgba(128, 128, 128, 0.25);
+    --red: red;
+}
+
+@font-face{
+    font-family: sans-serif;
+}
+
+body{
+    font-family: sans-serif;
+    color: black;
+}
+
+.container{
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+footer{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+}
+
+nav{    
+  background: white;
+  width: 500px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+}
+
+nav ul li {
+    flex: 1;
+    display: block;
+    padding: 1.2em;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* The drop down menu for the first li is not enabled at the moment */
+nav ul li:not(:first-child):hover{
+     box-shadow: 1px 1px 10px #888888;
+}
+
+.letter{
+    margin-top: 3em;
+    padding: 1.5em 1em;
+    overflow: scroll;
+    overflow-y: hidden;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 100vh;
+}
+
+.btn-submit{
+    flex: 2;
+}
+
+.more-options{
+    flex: 0.5;
+}
+
+iframe{
+    border: 1px solid var(--dust);
+    box-shadow: 1px 1px 10px #888888;
+    width: 100%;
+    height: 100%;
+}
